@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.myInfo{
+  align-items: center;
+  justify-self: center;
+  margin:0 auto;
+  height:40vh;
+  background-color:#000000;
+  z-index:1;
+  width:100%;
+  max-width:700px;
+  padding:0 50px;
+}
+.myInfo h1{
+  font-size:4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top,#ff0844 0%,#ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;  
+}
+.myInfo p{
+  margin-top: 0rem;
+    font-size:1rem;
+    font-weight: 800;
+    color:#ffff;
+    padding:10px 10px
+}
+.intro {
+  height: 100vh;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.intro h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: rgb(255, 0, 76);
+  background-color: transparent;
+}
+
+.intro h2{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: rgb(255, 0, 119);
+  width:1000px;
+  background-color: transparent;
+}
+section {
+  height: 30vh;
+  color: rgb(255, 255, 255);
+}
+
+section h1 {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 80px;
+  padding-bottom: 0px;
+}
+
+.text-box{
+  position:absolute;
+  top:0;
+  left:0;
+  background:#000;
+  height:100%;
+  width:100%;
+  color:rgb(255, 255, 255);
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  font-size: 80px;
+  font-weight:700;
+  mix-blend-mode:multiply;
+  transition:ease 2s;
+  object-fit: cover;
+
+}
+.text-box:hover{
+font-size:90px;
+font-weight:1000 ;
+}
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  object-fit: cover;
+
+  /* border-radius: 0px;
+  background-attachment: scroll;
+  overflow: hidden; */
+}
+.video {
+  min-width: 10%;
+  min-height: 10%;
+  max-width: 100%;
+  max-height:100%;
+  /* height:200px;
+  width:100%; */
+  position: relative;
+  /* z-index: 100; */
+  object-fit: cover;
+}
+.navbar {
+  background:#000000e1;
+  overflow:hidden;
+  height: 80px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar__container {
+  display:flex;
+  justify-content:space-between;
+  height: 90px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.navbar__menu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+.navbar__item{
+  height: 80px;
+}
+
+.navbar__links{
+  color:rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  font-size: 100;
+  font-weight: 200;
+}
+.button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height:100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background:#ff0055;
+  color: #fff;
+}
+
+.button:hover{
+  background:#4837ff;
+  transition: all 0.3s ease;
+  width:10px;
+  height:10px;
+}
+.navbar__links:hover{
+  color:#ff0055;
+  transition:all 0.3s ease;
+}
+.parallax {
+  /* The image used */
+  background-image: url("background.jpg");
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax {
+  /* The image used */
+  background-image: url("background.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  padding:10px;
+  width: 450px;
+  height: 300px;
+  perspective: 1000px;
+  float:left; 
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #ff0055;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.contact {
+  height: 30vh;
+  color: rgb(255, 255, 255);
+}
+
+.contact h1 {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 60px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  padding-top:0px;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-weight:10px ;
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  padding-right: 10px;
+  color: rgb(255, 255, 255);
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.ending{
+  padding-top: 100px;
+  height:50vh;
+  width:100%;
+}
+.ending video{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+html{
+  scroll-behavior: smooth;
+  transition: all ease 4s;
+}
+.ending a{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -200%);
+  font-size: 80px;
+  color: rgb(0, 81, 255);
+  background-color: transparent;
+}
+
+.card2 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.055);
+  transition: 0.3s;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  padding-top:10px;
+  padding-right:500px;
+  padding-left:500px;
+  padding-bottom: 10px;
+  position: relative;
+  float:center;
+  justify-content: center;
+  align-items: center;
+}
+/* On mouse-over, add a deeper shadow */
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.055);
+}
+
+/* Add some padding inside the card container */
+.card2 .container2 {
+  padding: 2px 10px;
+  background-color: rgb(70, 66, 66);
+  height:90%;
+  width: 100%;
+}
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+.card2 .container2 h4{
+  font-size:4rem;
+  /* background-color: #ff8177; */
+  /* background-image: linear-gradient(to top,#ff0844 0%,#ff00c8 100%); */
+  background-color:#fff;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;  
+}
+.card2 .container2 p{
+  margin-top: 0rem;
+    font-size:1rem;
+    font-weight: 400;
+    color:#ffff;
+    padding:10px 0px;
+    background-color:transparent;
+}
